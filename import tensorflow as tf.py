@@ -29,4 +29,5 @@ validation_generator = test_datagen.flow_from_directory('data/validation', targe
 # Train the model
 model.fit(train_generator, steps_per_epoch=8000//32, epochs=25, validation_data=validation_generator, validation_steps=2000//32)
 
+# Save the model
 model.save('fingerprint_recognition_model.h5')
